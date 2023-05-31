@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바 스크립트 문법 활용</title>
+</head>
+<body>
+    <script>
+        let userName = prompt("방문자의 이름을 입력하세요");
+        let userCode = prompt("회원식별 코드를 입력하세요");
+        userName == "root" && userCode =="2823" ? alert("관리자님 환영합니다.") : alert("잘못 접근했습니다.");
+        document.write("<h1>관리자(admin) 접속 중</h1>");
+        document.write("<p>일지않은 메일 : 50건");
+        let todos = [
+            {
+                id:1,
+                Text : "사전수업 참여하기",
+                img:"http//picsum.photos/200/160",
+                Date: "2023-5-31 10:00"
+            },
+            {
+                id:2,
+                Text : "점심 약속",
+                Date: "2023-5-31 13:00"
+            },
+            {
+                id:3,
+                Text : "자기",
+                Date: "2023-5-31 22:00"
+            }
+        ];
+        for(todo of todos){
+            close.log(todo);
+                    }
+    </script>
+
+</body>
+</html>
