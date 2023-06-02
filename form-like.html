@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자바스크립트 제어문 활용</h1>
+    <h2>if조건문을 이용한 로그인 폼 실습</h2>
+    <p>사용자와 상호 작용하는 명령어를 활용하세요.</p>
+    <script>
+        let root = {
+            id:"admin",
+            pw:"admin1004",
+            reg_date : new date('2020-12-03'),
+            ip:"172.69.33.204",
+            region:"Asia/seoul"
+        }
+    
+        //누군가가 로그인을 눌러서 시도하는 사람이 있고 이 사람이 id와 pw를 입력하면 if~else를 이용해 비교하고 그에 따른 처리
+        //웹API중 window.prompt():window 객체에 정의되어있는 prompt()함수=>메소드
+        let user_id = prompt('아이디를 입력하세요');
+        let user_pw = prompt('비밀번호를 입력하세요');
+        if(user_id === root.id){
+            if(user_pw===root.pw){
+                alert("관리자님 환영합니다. /n 관리자 페이지로 이동합니다.");
+                //location.href="/dashboard"
+            }else{
+                alert('id 또는 pw를 확인해주세요')
+            }
+        }else{
+            alert('id 또는 pw를 확인해주세요')
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>사용자 상호작용, IF~ELSE</h1>
+    <h2>웹 API를 활용해봅시다.</h2>
+    <p>회원탈퇴 UI에서 사용자가 탈퇴버튼을 눌렀을 떄 또는 그에 따른 처리</p>
+    <div class="retire-box">
+        <h3>회원탈퇴</h3>
+        <p>회원탈퇴는 가입했던 정보를 모두 삭제하고, 서비스를 더이상 제공받지 못하는 상태로 변경됩니다.</p>
+        <p>회원정보는 일주일간 별도로 보관된 뒤, 탈퇴 철회 요청이 없다면 30일 뒤 모두 일괄삭제됩니다.</p>
+        <button id="retireBT">탈퇴</button>
+        <button id="cancleBT">취소</button>
+    </div>
+    <script>
+        //1.탈퇴버튼 눌렀을 때 할일 등록 ==>이벤트 등록
+        //1-1.DOM요소 선택:탈뇌버튼
+        const retire = document.querySelector("#retireBT"); //css 선택자 문법
+        retire.addEventListener("click", () =>{
+            const userchoice = confirm("정말로, 탈퇴하시겠습니까?");
+            if(userchoice){
+                alert("데이터를 모두 삭제하고 탈퇴처리까지 일주일가량 소요됨니다.");
+            }else{
+                alert("보다 나은 서비스로 보답하겠습니다.");
+            }
+        })
+        
+        //윈도우 컨펌:메세지 2개 :확인, 취소
+        //확인:true, 취소:false
+        //if~else!처리가능
+    </script>
+</body>
+</html>

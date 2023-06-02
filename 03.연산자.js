@@ -35,3 +35,17 @@ console.log(result);
 
 //7.삼항 조건 연산자 : 조건 ? 참일 때 코드 : 거짓일 때 코드;
 result < 0 ? console.log("음수!") : console.log("양수!");
+
+//8. 증감 연산자 : ++, --
+//8-1.전위 증감 연산자 : ++변수 or --변수
+//8-2.후위 증감 연산자 : 변수++ or 변수--
+let total = 0;
+let count = 0;//뭔가 숫자를 세어서 그 값을 이용하는 변수
+++count;
+total = ++count;
+console.log('count'+count); //카운트의 초기값 : 0
+console.log('count'+total); //카운트의 초기값 : 0
+count++;
+total = count++;
+console.log('count'+count); //카운트의 초기값 : 0
+console.log('count'+total); //카운트의 초기값 : 0
